@@ -1,0 +1,44 @@
+//mencari nilai akhir tes matematika
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int nilai_akhir, nilai_tes, nilai_uts, nilai_uas, nilai_tugas;
+	char index;
+
+	cout << "masukkan nilai tes = ";
+	cin >> nilai_tes;
+	cout << "masukkan nilai uts = ";
+	cin >> nilai_uts;
+	cout << "masukkan nilai uas = ";
+	cin >> nilai_uas;
+	cout << "masukkan nilai tugas = ";
+	cin >> nilai_tugas;
+
+	nilai_akhir = (0.20*nilai_tes) + (0.30*nilai_uts) + (0.30*nilai_uas) + (0.20*nilai_tugas);
+
+	if (nilai_akhir <= 50)
+	{
+		index = 'D';
+	}
+	else if ((nilai_akhir <= 70) && (nilai_akhir > 50))
+	{
+		index = 'C';
+	}
+	else if ((nilai_akhir <= 80) && (nilai_akhir > 70))
+	{
+		index = 'B';
+	}
+	else
+	{
+		index = 'A';
+	}
+	cout << "nilai akhir anda adalah= "<< nilai_akhir;
+	cout << "\n";
+	cout << "nilai akhir anda = " << index;
+	cout << "\n";
+
+	return 0;
+}

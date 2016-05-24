@@ -1,0 +1,105 @@
+//konversi nilai dalam angka arab ke dalam angka romawi
+
+#include <iostream>
+using namespace std;
+
+main()
+ { int angka;
+
+cout<< "masukkan angka arab: ";
+cin>> angka;
+
+if (angka<1 || angka>1999) //angka kurang lebih dari 1999
+    cout << "angka tidak boleh melebihi dari 1999";
+else
+{
+    while (angka >= 1000)
+    {
+        cout << "M";
+        angka = angka - 1000;
+    }
+    if (angka >= 500)
+    {
+        if (angka>500)
+        {
+            if (angka >= 900)
+            {
+                cout << "CM";
+                angka = angka - 900;
+            }
+            else
+            {
+                cout << "D";
+                angka = angka - 500;
+            }
+        }
+    }
+    while (angka >= 100)
+    {
+        if (angka >= 400)
+        {
+            cout << "CD";
+            angka = angka - 400;
+        }
+        else
+        {
+            angka = angka - 100;
+        }
+    }
+    if (angka >= 50)
+    {
+        if (angka >= 90)
+        {
+            cout << "XC";
+            angka = angka - 90;
+        }
+        else
+        {
+            cout << "L";
+            angka = angka - 50;
+        }
+    }
+    while (angka >= 10)
+    {
+        if (angka >= 40)
+        {
+            cout << "XL";
+            angka = angka - 40;
+        }
+        else
+        {
+            cout << "X";
+            angka = angka - 10;
+        }
+    }
+    if (angka >= 5)
+    {
+        if (angka == 9)
+        {
+            cout << "IX";
+            angka = angka - 9;
+        }
+        else
+        {
+            cout << "V";
+            angka = angka - 5;
+        }
+    }
+    while (angka >= 1)
+    {
+        if (angka == 4)
+        {
+            cout << "IV";
+            angka = angka - 4;
+        }
+        else
+        {
+            cout << "I";
+            angka = angka - 1;
+        }
+    }
+}
+cout << "\n";
+return 0;
+
+}
